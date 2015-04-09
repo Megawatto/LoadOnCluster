@@ -12,7 +12,7 @@ l = threading.Lock()
 def test(n=0):
     global l
     l.acquire()
-    print("Th =" + str(n))
+    #print("Th =" + str(n))
     i = 0
     if mass[i] < 2:
         mass[i]+=1
@@ -23,16 +23,8 @@ def test(n=0):
             if mass[i] < 2:
                 mass[i]+=1
                 break
-    print(mass)
+    #print(mass)
     l.release()
-              
-##flag = True
-##while flag:
-##    q=0
-##    test()
-##    for w in mass:
-##        q+=w
-##        if q ==20:
-##            flag = False
-##            break
+    return mass
+
     
